@@ -3,7 +3,7 @@
 
 В коде несколько участков, которые можно улучшить. Рассмотрим их и прокомментируем:
 # 1. Метод removeProduct в классе Warehouse:
-''' javascript:
+'''javascript:
 public void removeProduct(T product, int quantity) {
     int currentQuantity = inventory.getOrDefault(product, 0);
     if (currentQuantity >= quantity) {
