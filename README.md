@@ -20,23 +20,23 @@ public void removeProduct(T product, int quantity) {
 операции удаления.
 
 # 2. Метод displayInventory в классе Warehouse:
-
+```javascript
 public void displayInventory() {
     System.out.println("Inventory:");
     for (Map.Entry<T, Integer> entry : inventory.entrySet()) {
         System.out.println(entry.getKey() + " - Quantity: " + entry.getValue());
     }
 }
-
+```
 Этот метод непосредственно выводит информацию о товарах на складе в консоль.
 Однако было бы лучше передавать эту информацию вызывающему коду, чем непосредственно
 выводить ее в консоль. Это сделает класс Warehouse более гибким и переиспользуемым,
 так как информацию можно будет использовать в различных контекстах.
 
 # 3. Поле inventory в классе Warehouse:
-
+```javascript
 private Map<T, Integer> inventory;
-
+```
 Хотя это поле не изменяется после его инициализации в конструкторе, было бы хорошо
 объявить его как final. Это сделает код более чистым и понятным, а также поможет
 предотвратить случайные изменения поля после его инициализации.
