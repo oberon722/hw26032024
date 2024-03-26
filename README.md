@@ -3,7 +3,7 @@
 
 В коде несколько участков, которые можно улучшить. Рассмотрим их и прокомментируем:
 # 1. Метод removeProduct в классе Warehouse:
-'''javascript
+```javascript
 public void removeProduct(T product, int quantity) {
     int currentQuantity = inventory.getOrDefault(product, 0);
     if (currentQuantity >= quantity) {
@@ -12,7 +12,7 @@ public void removeProduct(T product, int quantity) {
         throw new IllegalArgumentException("Insufficient quantity of " + product + " to remove.");
     }
 }
-'''
+```
 В этом методе у нас есть проверка наличия товара на складе перед его удалением.
 Однако, вместо того, чтобы выбрасывать исключение, мы могли бы просто не выполнять
 удаление, если товара недостаточно. Это более гибкий подход, поскольку позволяет
